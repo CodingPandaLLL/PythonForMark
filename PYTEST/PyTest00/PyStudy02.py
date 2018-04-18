@@ -45,7 +45,7 @@ print(infor("lll","n"))
 print(infor("zj","w",6))
 print(infor("gx","w",6,'hefei'))
 
-#传递可变参数
+#传递list参数
 def calc(numbers):
     sum = 0
     for n in numbers:
@@ -53,4 +53,13 @@ def calc(numbers):
     return sum
 print(calc([1, 2, 3]))
 print(calc([1, 2, 3,7,9]))
+
+#传递可变参数
+def calcs(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+print(calcs(1, 2, 3))
+print(calcs())
 
